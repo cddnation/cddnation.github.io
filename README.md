@@ -1,14 +1,8 @@
 # cddnation.github.io
 
-Welcome to the CDD Docs
-
-[cddnation.github.io](cddnation.github.io)
+This is the repo for the CDD Docs hosted at [http://cddnation.github.io/](http://cddnation.github.io/)
 
 These pages will hold all useful non-internal documentation and best practices.
-
------
-
-More info here
 
 ### Requirements
 
