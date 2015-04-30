@@ -5,7 +5,6 @@
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
-  margin-bottom: 3rem;
 }
 
 .masthead-title {
@@ -15,9 +14,11 @@
 
   a {
     color: #505050;
+    vertical-align: middle;
   }
 
   small {
+    margin-left: 1rem;
     font-size: 75%;
     font-weight: 400;
     color: #c0c0c0;

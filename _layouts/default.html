@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
   {% include head.html %}
-
   <body>
-
     <div class="container content">
+
       <header class="masthead">
         <h3 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-          <small>{{ site.tagline }}</small>
+        <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+        <small>{{ site.tagline }}</small>
         </h3>
+              
+        <ul class="nav">
+          <li><a href="{{ site.baseurl }}/" title="Home">Home</a></li>
+          {% assign pages_list = site.pages %}
+          {% assign group = 'navigation' %}
+          {% include pages_list %}
+        </ul>
+
       </header>
 
       <main>
-        {{ content }}
+      {{ content }}
       </main>
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
+        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
         </small>
         <br/>
         <small>
-          Jekyll theme built and released under MIT license by <a href="https://github.com/poole/poole">@mdo</a> Credits where credits due! 
+        Jekyll theme built and released under MIT license by <a href="https://github.com/poole/poole">@mdo</a> Credits where credits due!
         </small>
       </footer>
     </div>
-
   </body>
 </html>
