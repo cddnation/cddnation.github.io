@@ -7,7 +7,7 @@ These pages will hold all useful non-internal documentation and best practices.
 
 -----
 
-More info here
+The repo for these docs are located here: [https://github.com/cddnation/cddnation.github.io](https://github.com/cddnation/cddnation.github.io)
 
 ### Requirements
 
