@@ -12,38 +12,90 @@ CDD are big fans of the Perch CMS. Here's a collection of useful guides and patt
 # Index
 
 * Perch Style Guide
-    * Introduction
-    * Blocks
-    * Collections
-    * Folder structure
+    - Folder structure
 * Useful snippets
-    - SEO tag template 
+    - Title tag
     - Sitemap
-    - ... 
 
+---
 
 
 ## Perch Style Guide
 
+### Folder structure
 
-    styles/
-    |- application.scss _________________________ # SCSS Imports for (projectName)
-    |- _inbox.scss ______________________________ # Inbox (shame file)
-    styles\vendor/
-    |- _external.scss ___________________________ # External styles
-    styles\modules/
-    |- _module.scss _____________________________ # Example module
-    styles\mixins/
-    |- _breakpoints.scss ________________________ # Responsive breakpoints.
-    |- _typography.scss _________________________ # Typography mixins
-    |- _utilities.scss __________________________ # General helper mixins
-    styles\foundation/
-    |- _attributes.scss _________________________ # Global Attribute Modifiers
-    |- _base.scss _______________________________ # Base-level tags
-    |- _config.scss _____________________________ # Global Settings
-    styles\core/
-    |- _grid.scss _______________________________ # CSSWizandry grids
-    |- _helpers.scss ____________________________ # Helpers (placeholders)
-    |- _normalise.scss __________________________ # normalize.css v3.0.0 | MIT License | git.io/normalize
-    |- _print.scss ______________________________ # Print media styles
+    templates/
+    |-- categories/
+    |   |-- category.html
+    |-- content/
+    |   |-- blocks-main.html
+    |   |-- blocks-right_column.html
+    |   |-- blocks/
+    |       |-- full_width.html
+    |       |-- two_column-text.html
+    |       |-- two_column-image.html
+    |       |-- three_column-text.html
+    |   |-- collections/
+    |       |-- authors.html
+    |       |-- events.html
+    |       |-- news.html
+    |       |-- team_members.html
+    |   |-- forms/
+    |       |-- contact.html
+    |-- layouts/
+    |   |-- global/
+    |       |-- header.php
+    |       |-- footer.php
+    |   |-- navigation/
+    |       |-- breadcrumbs.html
+    |       |-- item.html
+    |       |-- sitemap.html
+    |-- pages/
+    |   |-- home.php
+    |   |-- main.php
+    |   |-- news.php
+    |   |-- attributes/
+    |       |-- default.html
+    |       |-- seo.html
+    |   |-- errors/
+    |       |-- 404.php
+    |-- pagination/
+    |   |-- default.html
+    |-- search/
+    |   |-- form.html
+    |   |-- result.html
 
+
+You will notice a sitemap in the `templates/layouts/navigation` folder. To get this working, please see the Sitemap section below.
+
+---
+
+
+
+## Useful snippets
+
+### Title Tag
+
+In your `templates/layouts/global/header.php` file, add the following within the `<head>` tag:
+
+    <?php PerchSystem::set_var('default_page_title', perch_pages_title(true)); ?>
+
+    <?php
+        perch_page_attributes(array(
+            'template' => 'seo.html'
+        ));
+    ?>
+
+
+In your seo.html add the following:
+
+
+    <title>
+        <perch:if exists="pagetitle"><perch:pages id="pagetitle" label="Title Tag" type="text" /><perch:else><perch:content id="default_page_title" /> | Project name</perch:if>
+    </title>
+
+
+
+### Sitemap
+
+Follow the instructions on [this page](http://solutions.grabaperch.com/html-and-css/how-do-i-create-a-google-sitemap) to get sitemaps working.
