@@ -74,6 +74,13 @@ You will notice a sitemap in the `templates/layouts/navigation` folder. To get t
 
 ## Useful snippets
 
+### Content Availability.
+Use the following snipet, to see what content you have available in your Perch template.
+    
+    <perch:showall />
+
+
+
 ### Title Tag
 
 In your `templates/layouts/global/header.php` file, add the following within the `<head>` tag:
