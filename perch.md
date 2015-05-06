@@ -16,6 +16,7 @@ CDD are big fans of the Perch CMS. Here's a collection of useful guides and patt
 * Useful snippets
     - Title tag
     - Sitemap
+    - Content Availability
 
 ---
 
@@ -74,7 +75,7 @@ You will notice a sitemap in the `templates/layouts/navigation` folder. To get t
 
 ## Useful snippets
 
-### Content Availability.
+### Content Availability
 Use the following snippet, to see what content you have available in your Perch template.
     
     <perch:showall />
