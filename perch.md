@@ -75,7 +75,7 @@ You will notice a sitemap in the `templates/layouts/navigation` folder. To get t
 ## Useful snippets
 
 ### Content Availability.
-Use the following snipet, to see what content you have available in your Perch template.
+Use the following snippet, to see what content you have available in your Perch template.
     
     <perch:showall />
 
