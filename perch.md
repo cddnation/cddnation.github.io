@@ -66,9 +66,6 @@ CDD are big fans of the Perch CMS. Here's a collection of useful guides and patt
     |   |-- form.html
     |   |-- result.html
 
-
-You will notice a sitemap in the `templates/layouts/navigation` folder. To get this working, please see the Sitemap section below.
-
 ---
 
 
@@ -83,6 +80,8 @@ Use the following snippet, to see what content you have available in your Perch 
 
 
 ### Title Tag
+
+These snippets will allow the CMS user to set the title for a page. If that value has not been set, it will display the default as set by the CMS itself. Here we amend the seo.html template, but you can create your own template and include this in default.html if you prefer.
 
 In your `templates/layouts/global/header.php` file, add the following within the `<head>` tag:
 
