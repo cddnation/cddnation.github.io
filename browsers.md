@@ -25,14 +25,17 @@ This page is a pool of useful scripts and code snippets that will help get aroun
 ## IE
 
 ### Responsiveness (IE6 - 8)
+
 The [Respond](https://github.com/scottjehl/Respond) script provides support for browsers that don't support CSS3 Media Queries.
 
 ### HTML5 Elements (IE6 - 9)
+
 The [HTML5Shiv](https://github.com/afarkas/html5shiv) script provides support for HTML5 elements that are not supported in legacy browsers.
 
 ## Testing
 
 ### VirtualBox (IE7+)
+
 Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads) to emulate different operating systems and the browsers they come with (Windows/IE).
 
 You can find a snapshot of windows machines supporting IE6-11 [here](https://github.com/xdissent/ievms).
