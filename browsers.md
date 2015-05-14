@@ -32,6 +32,8 @@ The [Respond](https://github.com/scottjehl/Respond) script provides support for 
 
 The [HTML5Shiv](https://github.com/afarkas/html5shiv) script provides support for HTML5 elements that are not supported in legacy browsers.
 
+---
+
 ## Testing
 
 ### VirtualBox (IE7+)
