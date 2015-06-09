@@ -106,3 +106,21 @@ In your seo.html add the following:
 ### Sitemap
 
 Follow the instructions on [this page](http://solutions.grabaperch.com/html-and-css/how-do-i-create-a-google-sitemap) to get sitemaps working.
+
+
+### Related Fields and Unique Identifiers
+
+You may find the need to add an ID or data attribute to your related field items in order to target them specifically.
+
+Using `<perch:content id="perch_item_zero_index" type="hidden" />` would work fine for a single instance of the related field. However, if this related field is part of a block, where you might use it multiple times within the same page region, you will get duplicate values. This is because the index starts again for each instance of the field.
+
+To get around this, use, or combine with `<perch:content id="_id" type="hidden" />`.
+
+
+
+
+
+
+
+
+
