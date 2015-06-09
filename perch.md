@@ -102,6 +102,11 @@ In your seo.html add the following:
         <perch:if exists="pagetitle"><perch:pages id="pagetitle" label="Title Tag" type="text" /><perch:else><perch:content id="default_page_title" /> | Project name</perch:if>
     </title>
 
+#### OG:tags
+
+Adding OG tags to the page (for social medial sharing tags) are pretty easy. [this guide](http://solutions.grabaperch.com/integrations/facebook-and-twitter-sharing) gives you the basics.
+
+PS: For OG tags in blog posts/news pages and collection pages, remember ot add all the OG tags to the master page ABOVE your header includes!
 
 
 ### Sitemap
@@ -117,7 +122,55 @@ Using `<perch:content id="perch_item_zero_index" type="hidden" />` would work fi
 
 To get around this, use, or combine with `<perch:content id="_id" type="hidden" />`.
 
+### Responsive Images
 
+Perch will resize image content for you. In cases where you need to allow the user to change images that need multiple sizes, use the following approaches.
+
+##### For regular images
+
+This is described in great detail in the perch documentation, [here](http://solutions.grabaperch.com/html-and-css/how-do-i-use-responsive-images-in-perch)
+
+##### For background images
+
+In cases where the image needs to be a background image (for example, where you need to use background-size: contain, or the image is behind the content), you can use this approach.
+
+The inline style tag is scoped, which means it will only affect elements within the parent container, in this case the article. This tag is ignored in older browsers, but since our class selector will be unique this shouldn't matter. With web components, scoped and inline styles will become more common, so even though it feels wrong, i wouldn't worry about it at this point.
+
+    <article>
+        <style scoped>
+            .story--<perch:content id="client_name" urlify="true" /> {
+                background-image:url(<perch:content id="hero_image" type="image" />);
+            }
+            @media only screen and (min-width: 640px) {
+                .story--<perch:content id="client_name" urlify="true" /> {
+                    background-image:url(<perch:content id="hero_image" type="image" width="640" />)
+                }
+            }
+            @media only screen and (min-width: 1366px) {
+                .story--<perch:content id="client_name" urlify="true" /> {
+                    background-image:url(<perch:content id="hero_image" type="image" width="1366" />)
+                }
+            }
+            @media only screen and (min-width: 1920px) {
+                .story--<perch:content id="client_name" urlify="true" /> {
+                    background-image:url(<perch:content id="hero_image" type="image" width="1920" />)
+                }
+            }
+        </style>
+
+        <div class="story story--<perch:content id="client_name" urlify="true" type="text" />">
+        
+            <div class="story__header">
+                <!-- content -->
+            </div>
+
+            <div class="story__body">
+                <!-- content -->
+            </div>
+
+        </div>
+
+    </article>
 
 
 
