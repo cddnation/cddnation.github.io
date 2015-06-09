@@ -14,9 +14,10 @@ CDD are big fans of the Perch CMS. Here's a collection of useful guides and patt
 * Perch Style Guide
     - Folder structure
 * Useful snippets
+    - Content Availability
     - Title tag
     - Sitemap
-    - Content Availability
+    - Related Fields and Unique Identifiers
 
 ---
 
